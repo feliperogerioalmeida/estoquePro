@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { SidebarProvider } from "./_components/ui/sidebar";
+import AppSidebar from "./_components/sidebar";
+
 export const metadata: Metadata = {
   title: "Stockly",
   description: "Dashboard De Vendas",
@@ -19,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <SidebarProvider>
+        <AppSidebar />
+        <body className={`${inter.className} antialiased`}>{children}</body>
+      </SidebarProvider>
     </html>
   );
 }
