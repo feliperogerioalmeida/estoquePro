@@ -5,7 +5,8 @@ import { DataTable } from "../_components/data-table";
 import { getProducts } from "../_data-access/product/get-products";
 
 const ProductsPage = async () => {
-  const products = await getProducts();
+  const response = await fetch(`${process.env.APP_URL}/api/products`);
+  const products = await response.json();
 
   return (
     <div className="m-8 w-full space-y-8 rounded-lg bg-white p-8">
