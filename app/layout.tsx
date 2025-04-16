@@ -4,6 +4,7 @@ import "./globals.css";
 
 import { SidebarProvider } from "./_components/ui/sidebar";
 import AppSidebar from "./_components/sidebar";
+import { Toaster } from "./_components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Stockly",
@@ -26,6 +27,7 @@ export default function RootLayout({
         <AppSidebar />
         <body className={`${inter.className} antialiased`}>{children}</body>
       </SidebarProvider>
+      <Toaster />
     </html>
   );
 }
