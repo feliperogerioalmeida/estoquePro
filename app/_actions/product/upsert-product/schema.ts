@@ -1,6 +1,7 @@
 import { z } from "zod";
 
-export const CreateProductSchema = z.object({
+export const UpsertProductSchema = z.object({
+  id: z.string().uuid().optional(),
   name: z.string().trim().min(1, {
     message: "O nome do produto é obrigatório.",
   }),
@@ -16,4 +17,4 @@ export const CreateProductSchema = z.object({
     }),
 });
 
-export type CreateProductSchema = z.infer<typeof CreateProductSchema>;
+export type UpsertProductSchema = z.infer<typeof UpsertProductSchema>;
