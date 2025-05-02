@@ -22,12 +22,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <SidebarProvider>
-        <AppSidebar />
-        <body className={`${inter.className} antialiased`}>{children}</body>
-      </SidebarProvider>
-      <Toaster />
+    <html lang="pt-br">
+      <body className={`${inter.className} antialiased`}>
+        <SidebarProvider>
+          <AppSidebar />
+
+          {children}
+          <Toaster />
+        </SidebarProvider>
+      </body>
     </html>
   );
 }
