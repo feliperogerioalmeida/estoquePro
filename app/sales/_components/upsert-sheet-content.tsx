@@ -83,7 +83,17 @@ const UpsertSheetContent = ({
       const existingProduct = currentProducts.find(
         (product) => product.id === selectedProduct.id,
       );
+
       if (existingProduct) {
+        const productIsOutOfStock =
+          existingProduct.quantity + data.quantity > selectedProduct.stock;
+        if (productIsOutOfStock) {
+          form.setError("quantity", {
+            message: "Quantidade indiponível em estoque.",
+          });
+          return currentProducts;
+        }
+        form.reset();
         return currentProducts.map((product) => {
           if (product.id === existingProduct.id) {
             return {
@@ -94,6 +104,15 @@ const UpsertSheetContent = ({
           return product;
         });
       }
+
+      const productIsOutOfStock = data.quantity > selectedProduct.stock;
+      if (productIsOutOfStock) {
+        form.setError("quantity", {
+          message: "Quantidade indiponível em estoque.",
+        });
+        return currentProducts;
+      }
+      form.reset();
       return [
         ...currentProducts,
         {
@@ -103,7 +122,6 @@ const UpsertSheetContent = ({
         },
       ];
     });
-    form.reset();
   };
 
   const productsTotal = useMemo(() => {
