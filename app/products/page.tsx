@@ -2,14 +2,10 @@ import { productTableColumns } from "./_components/table-columns";
 import { DataTable } from "../_components/data-table";
 
 import CreateProductButton from "./_components/create-product-button";
+import { getProducts } from "../_data-access/product/get-products";
 
 const ProductsPage = async () => {
-  const response = await fetch(`${process.env.APP_URL}/api/products`, {
-    method: "GET",
-    cache: "no-cache",
-  });
-
-  const products = await response.json();
+  const products = await getProducts();
 
   return (
     <div className="m-8 w-full space-y-8 rounded-lg bg-white p-8">
@@ -23,10 +19,7 @@ const ProductsPage = async () => {
         <CreateProductButton />
       </div>
 
-      <DataTable
-        columns={productTableColumns}
-        data={JSON.parse(JSON.stringify(products))}
-      />
+      <DataTable columns={productTableColumns} data={products} />
     </div>
   );
 };
