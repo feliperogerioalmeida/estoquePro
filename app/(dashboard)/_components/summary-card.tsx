@@ -1,3 +1,4 @@
+import { cn } from "@/app/_lib/utils";
 import React from "react";
 
 export const SummaryCardIcon = ({
@@ -28,6 +29,14 @@ export const SummaryCardValue = ({
   return <p className="text-2xl font-semibold text-slate-900">{children}</p>;
 };
 
-export const SummaryCard = ({ children }: { children: React.ReactNode }) => {
-  return <div className="rounded-xl bg-white p-6">{children}</div>;
+export const SummaryCard = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div className={cn("rounded-xl bg-white p-6", className)}>{children}</div>
+  );
 };
