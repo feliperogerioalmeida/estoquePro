@@ -1,19 +1,9 @@
 "use client";
 
-import { Badge } from "@/app/_components/ui/badge";
-
 import { ColumnDef } from "@tanstack/react-table";
-import { CircleIcon } from "lucide-react";
-
 import ProductTableDropdownMenu from "./table-dropdown-menu";
 import { ProductDTO } from "@/app/_data-access/product/get-products";
-
-const getStatusLabel = (status: string) => {
-  if (status == "IN_STOCK") {
-    return "Em estoque";
-  }
-  return "Fora de Estoque";
-};
+import ProductStatusBadge from "@/app/_components/product-status-badge";
 
 export const productTableColumns: ColumnDef<ProductDTO>[] = [
   {
@@ -38,21 +28,8 @@ export const productTableColumns: ColumnDef<ProductDTO>[] = [
   {
     accessorKey: "status",
     header: "Status",
-    cell: (row) => {
-      const product = row.row.original;
-      const label = getStatusLabel(product.status);
-      return (
-        <Badge
-          variant={label == "Em estoque" ? "default" : "outline"}
-          className="gap-1.5"
-        >
-          <CircleIcon
-            className={`${label == "Em estoque" ? "fill-primary-foreground" : "fill-destructive"}`}
-            size={14}
-          />
-          {label}
-        </Badge>
-      );
+    cell: ({ row: { original: product } }) => {
+      return <ProductStatusBadge status={product.status} />;
     },
   },
   {
