@@ -26,8 +26,7 @@ export default function RootLayout({
       <body className={`${inter.className} antialiased`}>
         <SidebarProvider>
           <AppSidebar />
-
-          {children}
+          <div className="flex h-screen flex-1 overflow-hidden">{children}</div>
           <Toaster />
         </SidebarProvider>
       </body>
