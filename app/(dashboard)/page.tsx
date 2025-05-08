@@ -33,7 +33,7 @@ const Home = async () => {
   } = await getDashboard();
 
   return (
-    <div className="m-8 flex h-full w-full flex-col space-y-8 rounded-lg">
+    <div className="flex h-full w-full flex-col space-y-8 rounded-lg p-8">
       <Header>
         <HeaderLeft>
           <HeaderSubtitle>Visão Geral dos dados</HeaderSubtitle>
