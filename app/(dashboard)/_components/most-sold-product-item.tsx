@@ -27,7 +27,7 @@ const MostSoldProductItem = ({ product }: MostSoldProductItemProps) => {
 
 export const MostSoldProductItemSkeleton = () => {
   return (
-    <div className="flex items-center justify-between bg-white">
+    <div className="flex items-center justify-between">
       <div className="space-y-[6px]">
         <Skeleton className="h-5 w-20 rounded-md" />
         <Skeleton className="h-4 w-32 rounded-md" />

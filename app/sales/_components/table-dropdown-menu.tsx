@@ -118,6 +118,7 @@ const SalesTableDropdownMenu = ({
       </AlertDialog>
 
       <UpsertSheetContent
+        isOpen={upseertSheetIsOpen}
         saleId={sale.id}
         productOptions={productOptions}
         products={products}
