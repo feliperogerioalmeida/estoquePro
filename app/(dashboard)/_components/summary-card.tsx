@@ -8,7 +8,7 @@ export const SummaryCardIcon = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-md bg-emerald-50 text-emerald-500">
+    <div className="mb-2 flex h-9 w-9 items-center justify-center rounded-md bg-slate-50 text-slate-500">
       {children}
     </div>
   );
