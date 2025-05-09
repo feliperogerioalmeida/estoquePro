@@ -1,5 +1,5 @@
-import { db } from "@/app/_lib/prisma";
 import "server-only";
+import { db } from "@/app/_lib/prisma";
 
 export const getTotalStock = async (): Promise<number> => {
   const totalStock = await db.product.aggregate({
