@@ -1,5 +1,7 @@
 import ProductStatusBadge from "@/app/_components/product-status-badge";
-import { MostSoldProductsDTO } from "@/app/_data-access/dashboard/get-dashboard";
+import { Skeleton } from "@/app/_components/ui/skeleton";
+import { MostSoldProductsDTO } from "@/app/_data-access/dashboard/get-most-sold-products";
+
 import { formatCurrency } from "@/app/_helpers/currency";
 
 interface MostSoldProductItemProps {
@@ -18,6 +20,21 @@ const MostSoldProductItem = ({ product }: MostSoldProductItemProps) => {
       </div>
       <div>
         <p className="text-sm font-semibold">{product.totalSold} vendido(s)</p>
+      </div>
+    </div>
+  );
+};
+
+export const MostSoldProductItemSkeleton = () => {
+  return (
+    <div className="flex items-center justify-between bg-white">
+      <div className="space-y-[6px]">
+        <Skeleton className="h-5 w-20 rounded-md" />
+        <Skeleton className="h-4 w-32 rounded-md" />
+        <Skeleton className="h-4 w-24 rounded-md" />
+      </div>
+      <div>
+        <Skeleton className="h-4 w-20 rounded-md" />
       </div>
     </div>
   );
