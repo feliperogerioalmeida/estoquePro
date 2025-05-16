@@ -1,36 +1,154 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏷️ EstoquePro
 
-## Getting Started
+[![version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/feliperogerioalmeida/stockly/releases) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
-First, run the development server:
+Sistema web para **gestão de estoque** e **controle de vendas**, voltado para pequenas e médias empresas que buscam eficiência e visual limpo.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📋 Índice
+
+- [Descrição](#descrição)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias](#tecnologias)
+- [Instalação](#instalação)
+- [Execução](#execução)
+- [Exemplos de Uso](#exemplos-de-uso)
+- [Contribuição](#contribuição)
+- [Licença](#licença)
+
+---
+
+## 📝 Descrição
+
+O **EstoquePro** é uma plataforma intuitiva para gerenciar produtos, acompanhar níveis de estoque e registrar vendas em tempo real. Pensado para donos de negócios que precisam de um controle profissional sem complicações, o EstoquePro oferece dashboards claros.
+
+---
+
+## 🚀 Funcionalidades
+
+- **Cadastro de produtos** com código, descrição, estoque mínimo e preço.
+- **Controle de estoque**: entradas, saídas e histórico de movimentações.
+- **Registro de vendas** com geração automática de recibos.
+- **Dashboard**: Admin gerencia vendas, receita e produto mais vendido.
+
+---
+
+## 🛠️ Tecnologias
+
+- **Fullstack**: React, Next.js, Tailwind CSS, Typescript
+- **Banco de Dados**: PostgreSQL (via Prisma ORM)
+- **Deploy**: Vercel (frontend) e sst para AWS
+
+---
+
+## ⚙️ Instalação
+
+1. **Clone o repositório**
+
+```
+bash
+git clone https://github.com/feliperogerioalmeida/estoquePro.git
+cd estoquePro
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Instale dependências**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. **Configuração das variáveis de ambiente:**
 
-## Learn More
+Crie um arquivo .env na raiz com:
 
-To learn more about Next.js, take a look at the following resources:
+```
+DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE"
+APP_URL="http://localhost:3000"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ▶️ Execução
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Iniciar o banco de dados (Docker)**
 
-## Deploy on Vercel
+```
+docker-compose up -d
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Rodar migrações**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+npx prisma migrate dev --name init
+```
+
+3. **Iniciar frontend**
+
+```
+npm run dev
+```
+
+## 📷 Exemplos de Uso
+
+### Dashboard
+
+<p align="center">
+ 
+  <img src="./public/examples/dashboard.png" alt="Dashboard EstoquePro" width="600"/>
+</p>
+
+### Produtos
+
+<p align="center">
+ 
+  <img src="./public/examples/products.png" alt="Dashboard EstoquePro" width="600"/>
+</p>
+
+### Adicionar Produto
+
+<p align="center">
+ 
+  <img src="./public/examples/addProduct.png" alt="Dashboard EstoquePro" width="600"/>
+</p>
+
+### Vendas
+
+<p align="center">
+ 
+  <img src="./public/examples/sales.png" alt="Dashboard EstoquePro" width="600"/>
+</p>
+
+### Nova venda
+
+<p align="center">
+ 
+  <img src="./public/examples/addSales.png" alt="Dashboard EstoquePro" width="600"/>
+</p>
+
+## 🤝 Contribuição
+
+1. Faça um fork deste repositório.
+
+2. Crie uma branch para sua feature:
+
+```
+git checkout -b feature/nova-funcionalidade
+```
+
+3. Commit suas alterações:
+
+```
+git commit -m "Adiciona nova funcionalidade"
+```
+
+4. Push para a branch
+
+```
+git push origin feature/nova-funcionalidade
+```
+
+5. Abra um Pull Request descrevendo sua contribuição.
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
