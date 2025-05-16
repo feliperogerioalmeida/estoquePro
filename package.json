@@ -1,13 +1,13 @@
 {
-  "name": "stockly",
+  "name": "EstoquePro",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "dev": "next dev",
     "lint": "next lint",
-    "prepare": "prisma generate"
+    "prepare": "prisma generate",
+    "start": "next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -36,6 +36,7 @@
     "react-number-format": "^5.4.4",
     "recharts": "^2.15.3",
     "sonner": "^2.0.3",
+    "sst": "3.14.12",
     "tailwind-merge": "^3.2.0",
     "tw-animate-css": "^1.2.5",
     "zod": "^3.24.4"

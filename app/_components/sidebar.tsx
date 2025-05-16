@@ -10,7 +10,9 @@ const AppSidebar = () => {
     <Sidebar className="w-64 bg-white">
       <SidebarHeader className="px-8 py-6">
         <SidebarContent>
-          <h1 className="text-2xl font-bold">STOCKLY</h1>
+          <h1 className="text-primary text-center text-2xl font-bold">
+            EstoquePRO
+          </h1>
         </SidebarContent>
       </SidebarHeader>
       <SidebarContent className="gap-2 p-2">
