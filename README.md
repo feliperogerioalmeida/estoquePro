@@ -27,10 +27,10 @@ O **EstoquePro** é uma plataforma intuitiva para gerenciar produtos, acompanhar
 
 ## 🚀 Funcionalidades
 
-- **Cadastro de produtos** com código, descrição, estoque mínimo e preço.
-- **Controle de estoque**: entradas, saídas e histórico de movimentações.
-- **Registro de vendas** com geração automática de recibos.
-- **Dashboard**: Admin gerencia vendas, receita e produto mais vendido.
+- **Dashboard Administrativo**
+- **Cadastro de produtos** 
+- **Controle de estoque** 
+- **Registro de vendas**
 
 ---
 
