@@ -2,6 +2,8 @@
 
 [![version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/feliperogerioalmeida/stockly/releases) [![license](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 
+🔗 **Demo (Deploy):** https://estoque-pro-theta.vercel.app
+
 Sistema web para **gestão de estoque** e **controle de vendas**, voltado para pequenas e médias empresas que buscam eficiência e visual limpo.
 
 ---
