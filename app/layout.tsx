@@ -7,7 +7,7 @@ import AppSidebar from "./_components/sidebar";
 import { Toaster } from "./_components/ui/sonner";
 
 export const metadata: Metadata = {
-  title: "Stockly",
+  title: "EstoquePro",
   description: "Dashboard De Vendas",
 };
 

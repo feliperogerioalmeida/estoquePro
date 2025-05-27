@@ -17,6 +17,5 @@ export const upsertProduct = actionClient
       create: data,
     });
 
-    revalidatePath("/products");
-    revalidatePath("/");
+    revalidatePath("/", "layout");
   });
