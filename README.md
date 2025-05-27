@@ -4,6 +4,8 @@
 
 Sistema web para **gestão de estoque** e **controle de vendas**, voltado para pequenas e médias empresas que buscam eficiência e visual limpo.
 
+🔗 **Demo (Deploy):** https://estoque-pro-theta.vercel.app
+
 ---
 
 ## 📋 Índice
@@ -28,8 +30,8 @@ O **EstoquePro** é uma plataforma intuitiva para gerenciar produtos, acompanhar
 ## 🚀 Funcionalidades
 
 - **Dashboard Administrativo**
-- **Cadastro de produtos** 
-- **Controle de estoque** 
+- **Cadastro de produtos**
+- **Controle de estoque**
 - **Registro de vendas**
 
 ---
